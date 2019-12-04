@@ -1,0 +1,8 @@
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Communication/etc/communication.xsd">
+    <broker topic="customCatalog" exchange="magento-db" type="db">
+        <queue name="customcatalog_product.update"
+               consumer="customproduct_action.sync"
+               consumerInstance="Magento\Framework\MessageQueue\Consumer"
+               handler="Altayer\CustomCatalog\Model\Subscriber::proceed"/>
+    </broker>
+</config>

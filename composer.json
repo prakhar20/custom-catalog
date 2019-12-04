@@ -1,0 +1,25 @@
+{
+    "name": "altayer/custom-catalog",
+    "description": "A Magento Module Custom Made for Assignment Given For the Interview of Al-Tayer Group",
+    "version": "0.0.1",
+    "type": "magento2-module",
+    "minimum-stability": "stable",
+    "homepage": "https://prakharbhardwaj.com",
+    "require": {},
+    "autoload": {
+        "files": [
+            "src/registration.php"
+        ],
+        "psr-4": {
+            "Altayer\\CustomCatalog\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Prakhar Bhardwaj",
+            "email": "prakhar20@live.com",
+            "homepage": "https://prakharbhardwaj.com",
+            "role": "Developer"
+        }
+    ],
+}
