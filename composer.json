@@ -8,10 +8,10 @@
     "require": {},
     "autoload": {
         "files": [
-            "src/registration.php"
+            "registration.php"
         ],
         "psr-4": {
-            "Altayer\\CustomCatalog\\": "src/"
+            "Altayer\\CustomCatalog\\": ""
         }
     },
     "authors": [

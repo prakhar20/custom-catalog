@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+	<virtualType name="Altayer\CustomCatalog\Model\ResourceModel\CustomCatalog\Grid\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+		<arguments>
+			<argument name="mainTable" xsi:type="string">altayer_customcatalog</argument>
+			<argument name="resourceModel" xsi:type="string">Altayer\CustomCatalog\Model\ResourceModel\CustomCatalog</argument>
+		</arguments>
+	</virtualType>
+	<type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+		<arguments>
+			<argument name="collections" xsi:type="array">
+				<item name="customcatalog_grid_data_source" xsi:type="string">Altayer\CustomCatalog\Model\ResourceModel\CustomCatalog\Grid\Collection</item>
+			</argument>
+		</arguments>
+	</type>
+
+	<preference for="Altayer\CustomCatalog\Api\CustomCatalogRepositoryInterface"
+                type="Altayer\CustomCatalog\Model\CustomCatalogRepository" />
+
+     <preference for="Altayer\CustomCatalog\Api\CustomCatalogApiInterface"
+                type="Altayer\CustomCatalog\Model\CustomCatalogApi" />
+    
+    <preference for="Altayer\CustomCatalog\Api\SyncDataInterface" type="Altayer\CustomCatalog\Model\SyncData" />
+
+	<preference for="Altayer\CustomCatalog\Api\SubscriberInterface" type="Altayer\CustomCatalog\Model\Subscriber" />
+</config>
