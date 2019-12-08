@@ -33,12 +33,12 @@ use Magento\Framework\Setup\SchemaSetupInterface;
 class UpgradeSchema implements UpgradeSchemaInterface
 {
     
-    protected $scriptHelper;    
+  
     public function __construct(
-        \Altayer\CustomCatalog\Setup\Scripts $scriptHelper
+       
     )
     {
-        $this->scriptHelper = $scriptHelper;
+       
     }        
 
     /**
@@ -50,7 +50,7 @@ class UpgradeSchema implements UpgradeSchemaInterface
     )
     {
         $setup->startSetup();        
-        $this->scriptHelper->run($setup, $context, 'schema');
+        
         // $table = $setup->getTable('altayer_customcatalog');
         $setup->getConnection()->addIndex(
             $setup->getTable('altayer_customcatalog'),
