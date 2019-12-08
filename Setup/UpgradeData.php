@@ -35,11 +35,8 @@ class UpgradeData implements UpgradeDataInterface
 {
     
     protected $scriptHelper;    
-    public function __construct(
-        \Altayer\CustomCatalog\Setup\Scripts $scriptHelper
-    )
+    public function __construct()
     {
-        $this->scriptHelper = $scriptHelper;
     }        
 
     /**
@@ -51,7 +48,6 @@ class UpgradeData implements UpgradeDataInterface
     )
     {
         $setup->startSetup();        
-        $this->scriptHelper->run($setup, $context, 'data');
         $setup->endSetup();
     }        
 }
